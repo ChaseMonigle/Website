@@ -3,11 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hobbies</title>
+  <title>My Hobbies</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f9ff;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: #005fcb;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #005fcb;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: decimal;
+      font-size: 18px;
+      padding-left: 20px;
+      margin-bottom: 40px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    ul li a {
+      color: #005fcb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .other-hobbies {
+      margin-top: 40px;
+    }
+
+    .other-hobbies h3 {
+      color: #005fcb;
+      margin-bottom: 10px;
+    }
+
+    .other-hobbies ul {
+      list-style-type: circle;
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hobbies</h1>
-  <p>This page is coming soon!</p>
+
+  <header>
+    <h1>Chase Monigle</h1>
+    <nav>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="about.html">All About Me</a>
+      <a href="cybersecurity.html">Cybersecurity</a>
+      <a href="Fraternity.html">Fraternity</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>My Top 3 Hobbies</h2>
+    <ul>
+      <li><a href="skimboarding.html">Skimboarding</a></li>
+      <li><a href="fishing.html">Fishing</a></li>
+      <li><a href="snowboarding.html">Snowboarding</a></li>
+    </ul>
+
+    <div class="other-hobbies">
+      <h3>Other Hobbies</h3>
+      <ul>
+        <li>Running</li>
+        <li>Surfing</li>
+        <li>Workout & Fitness</li>
+        <!-- Add more here later -->
+      </ul>
+    </div>
+  </main>
+
 </body>
 </html>
 
