@@ -88,6 +88,40 @@
       list-style-type: circle;
       padding-left: 20px;
     }
+
+    .click-note {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+  font-style: italic;
+}
+    .hobby-gallery {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.hobby-gallery h3 {
+  color: #005fcb;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-images img {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
   </style>
 </head>
 <body>
@@ -105,6 +139,7 @@
 
   <main>
     <h2>My Top 3 Hobbies</h2>
+    <p class="click-note">(Click a hobby to learn more)</p>
     <ul>
       <li><a href="skimboarding.html">Skimboarding</a></li>
       <li><a href="fishing.html">Fishing</a></li>
@@ -112,14 +147,24 @@
     </ul>
 
     <div class="other-hobbies">
-      <h3>Other Hobbies</h3>
+      <h3>Other Hobbies & Interests</h3>
       <ul>
+        <li>CTF (Capture the flag) </li>
         <li>Running</li>
         <li>Surfing</li>
         <li>Workout & Fitness</li>
+        <li>Video Games</li>
         <!-- Add more here later -->
       </ul>
     </div>
+    <div class="hobby-gallery">
+  <h3>Some Photos of My Hobbies</h3>
+  <div class="gallery-images">
+    <img src="hobby1.jpg" alt="Chase Skimboarding" />
+    <img src="hobby2.jpg" alt="Fishing Day" />
+  </div>
+</div>
+
   </main>
 
 </body>
