@@ -46,23 +46,50 @@
       text-align: center;
     }
 
-    main h2 {
-      color: #005fcb;
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    main p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: auto;
-    }
-
     footer {
       margin-top: 80px;
       padding: 20px;
       text-align: center;
       color: #666;
+    }
+
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .intro-photo {
+      flex: 1;
+      min-width: 280px;
+      max-width: 300px;
+    }
+
+    .intro-photo img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .intro-text {
+      flex: 2;
+      min-width: 280px;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .intro-text h2 {
+      font-size: 28px;
+      color: #005fcb;
+      margin-bottom: 16px;
+    }
+
+    .intro-text p {
+      font-size: 18px;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -80,8 +107,19 @@
   </header>
 
   <main>
-    <h2>Welcome to My Personal Website!</h2>
-    <p>This is the starting point of my personal site. I’m building it out piece by piece. Check back soon for updates on who I am and what I’ve worked on!</p>
+    <div class="intro-section">
+      <div class="intro-photo">
+        <img src="profile.jpg" alt="Photo of Chase" />
+      </div>
+      <div class="intro-text">
+        <h2>Hey, I'm Chase </h2>
+        <p>
+          I'm a Computer Science student with a passion for cybersecurity, tech, and all things creative. 
+          Outside of coding, I enjoy surfing, fishing, and spending time outdoors. 
+          This site is a work in progress where you'll soon find more about me, my resume, and projects I’ve worked on!
+        </p>
+      </div>
+    </div>
   </main>
 
   <footer>
