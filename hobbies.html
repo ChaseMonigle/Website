@@ -122,6 +122,21 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.hobby-columns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hobby-columns ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  column-gap: 40px;
+  list-style-type: circle;
+  padding-left: 40px;
+  font-size: 18px;
+}
 
   </style>
 </head>
@@ -149,6 +164,7 @@
 
     <div class="other-hobbies">
       <h3>Other Hobbies & Interests</h3>
+      <div class="hobby-columns">
       <ul>
         <li>CTF (Capture the flag) </li>
         <li>Running</li>
@@ -157,6 +173,7 @@
         <li>Video Games</li>
         <!-- Add more here later -->
       </ul>
+      </div>
     </div>
     <div class="hobby-gallery">
   <h3>Some Photos of My Hobbies</h3>
