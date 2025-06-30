@@ -51,12 +51,16 @@
       position: relative;
       max-width: 100%;
       margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 12px;
     }
 
     .slides {
       display: none;
       width: 100%;
-      border-radius: 10px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
@@ -68,7 +72,7 @@
       padding: 16px;
       color: white;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 24px;
       transition: 0.3s;
       user-select: none;
       background-color: rgba(0, 0, 0, 0.3);
@@ -118,11 +122,9 @@
 
   <main>
     <div class="slideshow-container">
-      <img class="slides" src="FishingPhoto1.png" alt="Fishing 1">
       <img class="slides" src="FishingPhoto2.png" alt="Fishing 2">
       <img class="slides" src="FishingPhoto3.png" alt="Fishing 3">
       <img class="slides" src="FishingPhoto4.png" alt="Fishing 4">
-      <img class="slides" src="FishingPhoto5.png" alt="Fishing 5">
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -152,13 +154,4 @@
       let i;
       let slides = document.getElementsByClassName("slides");
       if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slides[slideIndex-1].style.display = "block";  
-    }
-  </script>
-
-</body>
-</html>
+      if (n
