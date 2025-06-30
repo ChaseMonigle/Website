@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fishing</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f9ff;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: #005fcb;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.3s;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .caption {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .story {
+      margin-top: 40px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Chase Monigle</h1>
+    <nav>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="about.html">All About Me</a>
+      <a href="cybersecurity.html">Cybersecurity</a>
+      <a href="Fraternity.html">Fraternity</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="slideshow-container">
+      <img class="slides" src="FishingPhoto1.png" alt="Fishing 1">
+      <img class="slides" src="FishingPhoto2.png" alt="Fishing 2">
+      <img class="slides" src="FishingPhoto3.png" alt="Fishing 3">
+      <img class="slides" src="FishingPhoto4.png" alt="Fishing 4">
+      <img class="slides" src="FishingPhoto5.png" alt="Fishing 5">
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="caption">My favorite moments out on the water 🎣</div>
+
+    <div class="story">
+      <p>
+        Ever since I was a young boy, I’ve loved fishing. From early mornings on the dock to deep-sea adventures,
+        it's always brought me peace, focus, and a connection to nature. Whether it's saltwater or freshwater,
+        solo trips or time with friends — there's nothing quite like casting a line and waiting for that first bite.
+        Fishing has been a lifelong passion of mine and something I plan to keep doing for years to come.
+      </p>
+    </div>
+  </main>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+    }
+  </script>
+
+</body>
+</html>
