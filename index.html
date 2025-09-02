@@ -1,18 +1,120 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Chase Monigle — It Works</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chase Monigle — Portfolio</title>
+  <meta name="description" content="Portfolio website for Chase Monigle — Computer Science (Cybersecurity) student at Florida Tech." />
+  <link rel="icon" href="Photos/Shark.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
 <body>
-  <h1>It works ✅</h1>
-  <p>This is the root <code>index.html</code>.</p>
-  <p><a href="Pages/about.html">About</a> ·
-     <a href="Pages/resume.html">Resume</a> ·
-     <a href="Pages/cybersecurity.html">Cyber</a> ·
-     <a href="Pages/hobbies.html">Hobbies</a>
-  </p>
-  <hr>
-  <p>If you can see this page at <em>https://chasemonigle.github.io/Website/</em>, GitHub Pages is configured correctly.</p>
+  <!-- Navbar -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="Photos/Shark.png" alt="Shark favicon" />
+        CM
+      </a>
+      <nav class="links" style="display:flex; gap:1rem">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#outside">Outside</a>
+        <a href="Pages/resume.html">Resume</a>
+        <a href="Pages/about.html">About</a>
+        <a href="Pages/cybersecurity.html">Cyber</a>
+        <a href="Pages/hobbies.html">Hobbies</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="section hero">
+    <div class="container grid grid-2">
+      <div>
+        <h1>Chase Monigle</h1>
+        <p><strong>Computer Science @ Florida Institute of Technology</strong> — Cybersecurity concentration.</p>
+        <p>Welcome to my portfolio website! Here you’ll find my projects, experience, and a glimpse into life outside the classroom.</p>
+        <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap">
+          <a class="pill" href="mailto:Chasemonigle1@gmail.com">Email</a>
+          <a class="pill" href="https://github.com/ChaseMonigle" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="pill" href="https://www.linkedin.com/in/chase-monigle-8b3421323/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div>
+        <img class="responsive-img" src="Photos/Suit.jpeg" alt="Chase Monigle headshot" />
+        <p class="small" style="margin-top:.5rem">Paths are case-sensitive: <code>Photos/Suit.jpeg</code> (capital P).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid grid-3" style="margin-top:1rem">
+        <article class="card">
+          <img class="thumb" src="Photos/Wave.png" alt="Wave graphic" />
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
+            <h3 style="margin:0">Campus Shuttle Tracker</h3>
+            <span class="pill">2025</span>
+          </div>
+          <p>Custom dashboard on Traccar’s APIs to visualize live bus positions, ETAs, and route health.</p>
+        </article>
+        <article class="card">
+          <img class="thumb" src="Photos/Beach.jpeg" alt="Beach photo" />
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
+            <h3 style="margin:0">Personal Website</h3>
+            <span class="pill">Ongoing</span>
+          </div>
+          <p>Fast, clean, accessible site with consistent visuals across About and Resume.</p>
+        </article>
+        <article class="card">
+          <img class="thumb" src="Photos/Shark.png" alt="Shark icon" />
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
+            <h3 style="margin:0">Incident Triage Scripts</h3>
+            <span class="pill">2024</span>
+          </div>
+          <p>Utilities for hashing, IOC lookup, and log slicing that speed up first-response triage.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <p>Manager • Beach Equipment Rental Company (Summer 2021 — Present). Scheduling, hiring, inventory, and customer resolution. SGA Greek Life Liaison. Theta Xi founding member. FITSEC member. NCL Team Captain (Spring 2025). Google Cybersecurity Certificate (July 2024).</p>
+    </div>
+  </section>
+
+  <!-- Outside -->
+  <section id="outside" class="section">
+    <div class="container">
+      <h2>Outside the Classroom</h2>
+      <div class="grid grid-3" style="margin-top:1rem">
+        <article class="card">
+          <img class="thumb" src="Photos/Surf.png" alt="Surfing" />
+          <h3 style="margin-top:.75rem">Surfing</h3>
+          <p>Clean lines, heavy swell, patience, and pattern recognition.</p>
+        </article>
+        <article class="card">
+          <img class="thumb" src="Photos/KingFish.png" alt="Fishing a kingfish" />
+          <h3 style="margin-top:.75rem">Fishing</h3>
+          <p>Reading tides and structure — quiet, methodical, rewarding.</p>
+        </article>
+        <article class="card">
+          <img class="thumb" src="Photos/Beach.jpeg" alt="Florida beach" />
+          <h3 style="margin-top:.75rem">Running</h3>
+          <p>Keeps my mind sharp and helps with long-term goals and systems.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">© <span id="y"></span> Chase Monigle — Built with GitHub Pages</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
