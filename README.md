@@ -8,4 +8,4 @@ I’m **Chase Monigle**, a Computer Science student at the Florida Institute of 
 
 This site is my professional portfolio: it highlights my **projects, resume, experience, organizations, and hobbies** both inside and outside the classroom.
 
-## Structure
+
