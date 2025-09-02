@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cybersecurity — Chase Monigle</title>
+  <link rel="icon" href="../photos/Shark.png" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../Home.html">
+        <img src="../photos/Shark.png" alt="Shark favicon" />
+        CM
+      </a>
+      <nav class="links" style="display:flex; gap:1rem">
+        <a href="../Home.html#projects">Projects</a>
+        <a href="../Home.html#experience">Experience</a>
+        <a href="../Home.html#outside">Outside</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container grid grid-3">
+      <article class="card">
+        <h3 style="margin-top:0">Shuttle Tracking App (Senior Design)</h3>
+        <p>Leading development of a GPS-based campus shuttle tracking app using Traccar API with a custom frontend. Real-time mapping, task planning, testing, and integration.</p>
+        <ul class="ul-plain">
+          <li><span class="dot"></span> Real-time positions via WebSocket; REST for history</li>
+          <li><span class="dot"></span> Frontend overlays for routes and ETAs</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3 style="margin-top:0">Incident Triage Scripts</h3>
+        <p>Utilities for fast hashing, IOC lookup, and log slicing to accelerate first-response triage.</p>
+        <ul class="ul-plain">
+          <li><span class="dot"></span> Safe defaults and structured output</li>
+          <li><span class="dot"></span> Python + Bash; unit-tested helpers</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3 style="margin-top:0">Competitions & Club Work</h3>
+        <ul class="ul-plain">
+          <li><span class="dot"></span> FITSEC Cybersecurity Club — workshops & CTFs</li>
+          <li><span class="dot"></span> National Cyber League — Team Captain (Spring 2025)</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">© <span id="y"></span> Chase Monigle</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
