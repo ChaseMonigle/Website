@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chase Monigle — Portfolio</title>
-  <meta name="description" content="Portfolio website for Chase Monigle — Computer Science (Cybersecurity) student at Florida Tech." />
+  <title>Chase Monigle — CS @ Florida Tech • Cybersecurity</title>
+  <meta name="description" content="Chase Monigle — projects, experience, resume, and life outside the classroom." />
   <link rel="icon" href="Photos/Shark.png" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
@@ -33,8 +33,14 @@
     <div class="container grid grid-2">
       <div>
         <h1>Chase Monigle</h1>
-        <p><strong>Computer Science @ Florida Institute of Technology</strong> — Cybersecurity concentration.</p>
-        <p>Welcome to my portfolio website! Here you’ll find my projects, experience, and a glimpse into life outside the classroom.</p>
+        <p><strong>Computer Science @ Florida Institute of Technology</strong> — Cybersecurity concentration (B.S., expected May 2026).</p>
+        <p>I build practical, usable tools—like a live <em>Campus Shuttle Tracker</em> using Traccar’s REST & WebSocket APIs—and I enjoy turning complex systems into friendly experiences.</p>
+        <div class="tagrow">
+          <span class="pill">Endpoint Hardening</span>
+          <span class="pill">Web App Security</span>
+          <span class="pill">Usable Tooling</span>
+          <span class="pill">DevOps Basics</span>
+        </div>
         <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap">
           <a class="pill" href="mailto:Chasemonigle1@gmail.com">Email</a>
           <a class="pill" href="https://github.com/ChaseMonigle" target="_blank" rel="noreferrer">GitHub</a>
@@ -51,31 +57,46 @@
   <!-- Projects -->
   <section id="projects" class="section">
     <div class="container">
-      <h2>Projects</h2>
+      <h2>Featured Projects</h2>
       <div class="grid grid-3" style="margin-top:1rem">
         <article class="card">
-          <img class="thumb" src="Photos/Wave.png" alt="Wave graphic" />
+          <img class="thumb" src="Photos/Wave.png" alt="Wave graphic representing real-time data" />
           <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
             <h3 style="margin:0">Campus Shuttle Tracker</h3>
             <span class="pill">2025</span>
           </div>
           <p>Custom dashboard on Traccar’s APIs to visualize live bus positions, ETAs, and route health.</p>
+          <ul class="ul-plain">
+            <li><span class="dot"></span> WebSocket stream with reconnection & backoff</li>
+            <li><span class="dot"></span> Map overlays and mobile-first controls</li>
+            <li><span class="dot"></span> TypeScript, React, REST/WebSocket</li>
+          </ul>
         </article>
+
         <article class="card">
-          <img class="thumb" src="Photos/Beach.jpeg" alt="Beach photo" />
+          <img class="thumb" src="Photos/Beach.jpeg" alt="Beach photo representing clean design" />
           <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
             <h3 style="margin:0">Personal Website</h3>
             <span class="pill">Ongoing</span>
           </div>
           <p>Fast, clean, accessible site with consistent visuals across About and Resume.</p>
+          <ul class="ul-plain">
+            <li><span class="dot"></span> Deployed via GitHub Pages</li>
+            <li><span class="dot"></span> Tight typography and sections</li>
+          </ul>
         </article>
+
         <article class="card">
-          <img class="thumb" src="Photos/Shark.png" alt="Shark icon" />
+          <img class="thumb" src="Photos/Shark.png" alt="Shark icon representing security tooling" />
           <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
             <h3 style="margin:0">Incident Triage Scripts</h3>
             <span class="pill">2024</span>
           </div>
-          <p>Utilities for hashing, IOC lookup, and log slicing that speed up first-response triage.</p>
+          <p>Utilities for hashing, IOC lookup, and log slicing to accelerate first-response triage.</p>
+          <ul class="ul-plain">
+            <li><span class="dot"></span> Safe defaults and structured output</li>
+            <li><span class="dot"></span> Python + Bash with small unit tests</li>
+          </ul>
         </article>
       </div>
     </div>
@@ -83,9 +104,28 @@
 
   <!-- Experience -->
   <section id="experience" class="section">
-    <div class="container">
-      <h2>Experience</h2>
-      <p>Manager • Beach Equipment Rental Company (Summer 2021 — Present). Scheduling, hiring, inventory, and customer resolution. SGA Greek Life Liaison. Theta Xi founding member. FITSEC member. NCL Team Captain (Spring 2025). Google Cybersecurity Certificate (July 2024).</p>
+    <div class="container grid grid-2">
+      <article class="card">
+        <div style="display:flex; align-items:center; justify-content:space-between">
+          <h3 style="margin:0">Manager • Beach Equipment Rental Company</h3>
+          <span class="pill">Summer 2021 — Present</span>
+        </div>
+        <ul class="ul-plain">
+          <li><span class="dot"></span> Scheduling, hiring, and daily operations</li>
+          <li><span class="dot"></span> Inventory management and task delegation</li>
+          <li><span class="dot"></span> Customer conflict resolution; promoted for reliability</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3 style="margin:0">Organizations & Roles</h3>
+        <ul class="ul-plain">
+          <li><span class="dot"></span> Student Government Association — Greek Life Liaison (Fall 2024–Present)</li>
+          <li><span class="dot"></span> Theta Xi (Founding Member) — grew 8 → 30+ members</li>
+          <li><span class="dot"></span> FITSEC — Cybersecurity Club Member</li>
+          <li><span class="dot"></span> National Cyber League — Team Captain (Spring 2025)</li>
+          <li><span class="dot"></span> Google Cybersecurity Certificate (July 2024)</li>
+        </ul>
+      </article>
     </div>
   </section>
 
@@ -97,24 +137,24 @@
         <article class="card">
           <img class="thumb" src="Photos/Surf.png" alt="Surfing" />
           <h3 style="margin-top:.75rem">Surfing</h3>
-          <p>Clean lines, heavy swell, patience, and pattern recognition.</p>
+          <p>Clean lines and heavy swell build patience and pattern recognition.</p>
         </article>
         <article class="card">
           <img class="thumb" src="Photos/KingFish.png" alt="Fishing a kingfish" />
           <h3 style="margin-top:.75rem">Fishing</h3>
-          <p>Reading tides and structure — quiet, methodical, rewarding.</p>
+          <p>Reading tides and structure feels like debugging — quiet and methodical.</p>
         </article>
         <article class="card">
           <img class="thumb" src="Photos/Beach.jpeg" alt="Florida beach" />
           <h3 style="margin-top:.75rem">Running</h3>
-          <p>Keeps my mind sharp and helps with long-term goals and systems.</p>
+          <p>Keeps my mind sharp and focused on long-term goals.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">© <span id="y"></span> Chase Monigle — Built with GitHub Pages</footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
