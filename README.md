@@ -1,6 +1,7 @@
 # Chase Monigle — Portfolio Website
 
-[🌐 View the live site](https://chasemonigle.github.io/Website/Home.html)
+[🌐 View the live site](https://chasemonigle.github.io/Website/
+)
 
 ## About
 I’m **Chase Monigle**, a Computer Science student at the Florida Institute of Technology with a concentration in **Cybersecurity** (B.S., expected May 2026).  
