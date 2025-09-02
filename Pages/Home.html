@@ -5,33 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chase Monigle — CS @ Florida Tech • Cybersecurity</title>
   <meta name="description" content="Chase Monigle — Computer Science (Cybersecurity) at Florida Tech. Projects, experience, and life outside the classroom." />
-  <meta property="og:title" content="Chase Monigle — CS @ Florida Tech • Cybersecurity" />
-  <meta property="og:description" content="Projects, experience, and life outside the classroom." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="photos/Shark.png" />
+  <link rel="icon" href="Photos/Shark.png" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="Home.html">
-        <img src="photos/Shark.png" alt="Shark favicon" />
+        <img src="Photos/Shark.png" alt="Shark favicon" />
         CM
       </a>
       <nav class="links" style="display:flex; gap:1rem">
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#outside">Outside</a>
-        <a href="pages/resume.html">Resume</a>
-        <a href="pages/about.html">About</a>
-        <a href="pages/cybersecurity.html">Cyber</a>
-        <a href="pages/hobbies.html">Hobbies</a>
+        <a href="resume.html">Resume</a>
+        <a href="about.html">About</a>
+        <a href="cybersecurity.html">Cyber</a>
+        <a href="hobbies.html">Hobbies</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="section hero">
     <div class="container grid grid-2">
       <div>
@@ -51,33 +46,32 @@
         </div>
       </div>
       <div>
-        <img class="responsive-img" src="photos/Suit.jpeg" alt="Chase Monigle headshot" />
-        <p class="small" style="margin-top:.5rem">Make sure the path & capitalization match your file exactly (e.g., <code>photos/Suit.jpeg</code>).</p>
+        <img class="responsive-img" src="Photos/Suit.jpeg" alt="Chase Monigle headshot" />
+        <p class="small" style="margin-top:.5rem">Paths are case-sensitive: <code>Photos/Suit.jpeg</code> (capital P).</p>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="section">
     <div class="container">
       <h2>Featured Projects</h2>
       <div class="grid grid-3" style="margin-top:1rem">
         <article class="card">
-          <img class="thumb" src="photos/Wave.png" alt="Wave graphic representing real-time shuttles" />
+          <img class="thumb" src="Photos/Wave.png" alt="Wave graphic" />
           <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
             <h3 style="margin:0">Campus Shuttle Tracker</h3>
             <span class="pill">2025</span>
           </div>
           <p>Custom dashboard on Traccar’s APIs to visualize live bus positions, ETAs, and route health.</p>
           <ul class="ul-plain">
-            <li><span class="dot"></span> WebSocket stream fan-out with reconnection & backoff</li>
+            <li><span class="dot"></span> WebSocket fan-out with reconnection & backoff</li>
             <li><span class="dot"></span> Map overlays and mobile-first controls</li>
             <li><span class="dot"></span> TypeScript, React, REST/WebSocket</li>
           </ul>
         </article>
 
         <article class="card">
-          <img class="thumb" src="photos/Beach.jpeg" alt="Beach photo representing clean design" />
+          <img class="thumb" src="Photos/Beach.jpeg" alt="Beach photo" />
           <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
             <h3 style="margin:0">Personal Website</h3>
             <span class="pill">Ongoing</span>
@@ -90,7 +84,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="photos/Shark.png" alt="Shark icon representing security tooling" />
+          <img class="thumb" src="Photos/Shark.png" alt="Shark icon" />
           <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
             <h3 style="margin:0">Incident Triage Scripts</h3>
             <span class="pill">2024</span>
@@ -105,7 +99,6 @@
     </div>
   </section>
 
-  <!-- Experience -->
   <section id="experience" class="section">
     <div class="container grid grid-2">
       <article class="card">
@@ -114,7 +107,7 @@
           <span class="pill">Summer 2021 — Present</span>
         </div>
         <ul class="ul-plain">
-          <li><span class="dot"></span> Oversaw scheduling, hiring, team coordination; promoted for leadership & reliability</li>
+          <li><span class="dot"></span> Scheduling, hiring, team coordination; promoted for leadership & reliability</li>
           <li><span class="dot"></span> Managed inventory, delegated tasks, resolved customer issues</li>
         </ul>
       </article>
@@ -131,31 +124,11 @@
     </div>
   </section>
 
-  <!-- Outside the Classroom -->
   <section id="outside" class="section">
     <div class="container">
       <h2>Outside the Classroom</h2>
       <div class="grid grid-3" style="margin-top:1rem">
         <article class="card">
-          <img class="thumb" src="photos/Surf.png" alt="Surfing" />
+          <img class="thumb" src="Photos/Surf.png" alt="Surfing" />
           <h3 style="margin-top:.75rem">Surfing</h3>
-          <p>I chase clean lines and heavy swell—ocean conditions build patience and pattern recognition.</p>
-        </article>
-        <article class="card">
-          <img class="thumb" src="photos/KingFish.png" alt="Fishing a kingfish" />
-          <h3 style="margin-top:.75rem">Fishing</h3>
-          <p>Reading tides and structure feels like debugging—quiet, methodical, and rewarding.</p>
-        </article>
-        <article class="card">
-          <img class="thumb" src="photos/Beach.jpeg" alt="Florida beach" />
-          <h3 style="margin-top:.75rem">Running</h3>
-          <p>Training keeps my mind sharp and helps me think long-term about goals and systems.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">© <span id="y"></span> Chase Monigle — Built with GitHub Pages</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+          <p>I chase c
