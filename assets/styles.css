@@ -1,4 +1,4 @@
-/* assets/styles.css — modern, readable, mobile-first */
+/* Minimal, professional, mobile-first styles */
 
 :root{
   --bg:#f8fafc;      /* slate-50 */
@@ -16,17 +16,14 @@ body{
   color:var(--ink); background:linear-gradient(#eef2f7, var(--bg));
 }
 
-/* Layout helpers */
 .container{max-width:1120px; margin-inline:auto; padding:0 1rem}
 .section{padding:4rem 0}
 .grid{display:grid; gap:1rem}
 @media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
 
-/* Card */
 .card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:1rem; box-shadow:0 1px 2px rgba(2,8,23,.04)}
 .pill{display:inline-flex; align-items:center; gap:.5rem; padding:.25rem .6rem; border:1px solid var(--line); border-radius:999px; font-size:.75rem}
 
-/* Header / Nav */
 .site-header{
   position:sticky; top:0; z-index:50;
   backdrop-filter:saturate(1.2) blur(8px);
@@ -39,19 +36,15 @@ body{
 .brand{display:flex; align-items:center; gap:.5rem; font-weight:800}
 .brand img{width:22px; height:22px; border-radius:4px; border:1px solid var(--line)}
 
-/* Hero */
 .hero h1{font-size:clamp(2rem,4vw,3rem); line-height:1.1; margin:0}
 .hero p{color:var(--muted); max-width:60ch}
 .hero .tagrow{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.75rem}
 
-/* Lists */
 .ul-plain{list-style:none; margin:0; padding:0}
 .ul-plain li{display:flex; gap:.5rem}
 .dot{margin-top:.6rem; width:.35rem; height:.35rem; border-radius:50%; background:#94a3b8}
 
-/* Footer */
 .footer{padding:2rem 0; color:var(--muted); text-align:center}
 
-/* Images */
 .responsive-img{width:100%; height:auto; border-radius:12px; border:1px solid var(--line)}
 .thumb{width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; border:1px solid var(--line)}
