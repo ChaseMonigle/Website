@@ -4,25 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resume — Chase Monigle</title>
-  <link rel="icon" href="../Photos/Shark.png" />
+  <link rel="icon" href="../photos/Shark.png" />
   <link rel="stylesheet" href="../assets/styles.css" />
-  <style>
-    .pdf-frame{width:100%; height:80vh; border:1px solid var(--line); border-radius:12px; background:#fff}
-  </style>
+  <style>.pdf-frame{width:100%; height:80vh; border:1px solid var(--line); border-radius:12px; background:#fff}</style>
 </head>
 <body>
-  <!-- Shared Navbar -->
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="../index.html">
-        <img src="../Photos/Shark.png" alt="Shark favicon" />
+      <a class="brand" href="../Home.html">
+        <img src="../photos/Shark.png" alt="Shark favicon" />
         CM
       </a>
       <nav class="links" style="display:flex; gap:1rem">
-        <a href="../index.html#projects">Projects</a>
-        <a href="../index.html#experience">Experience</a>
-        <a href="../index.html#outside">Outside</a>
-        <a class="pill" href="../PDF/Chase_Monigle_Resume.pdf" download>Download PDF</a>
+        <a href="../Home.html#projects">Projects</a>
+        <a href="../Home.html#experience">Experience</a>
+        <a href="../Home.html#outside">Outside</a>
+        <a class="pill" href="../pdf/Chase_Monigle_Resume.pdf" download>Download PDF</a>
+        <a class="pill" href="mailto:Chasemonigle1@gmail.com">Email</a>
+        <a class="pill" href="https://www.linkedin.com/in/chase-monigle-8b3421323/" target="_blank" rel="noreferrer">LinkedIn</a>
       </nav>
     </div>
   </header>
@@ -30,13 +29,10 @@
   <section class="section">
     <div class="container">
       <h1 style="margin:0 0 1rem 0">Resume</h1>
-
-      <!-- Embedded viewer: use either <iframe> (simple) or <object>. -->
-      <iframe class="pdf-frame" src="../PDF/Chase_Monigle_Resume.pdf#view=FitH"></iframe>
-
+      <iframe class="pdf-frame" src="../pdf/Chase_Monigle_Resume.pdf#view=FitH"></iframe>
       <div style="margin-top:1rem">
-        <a class="pill" href="../PDF/Chase_Monigle_Resume.pdf" download>Download PDF</a>
-        <span style="margin-left:.75rem; color:var(--muted)">If the preview doesn’t load on mobile, use the download button.</span>
+        <a class="pill" href="../pdf/Chase_Monigle_Resume.pdf" download>Download PDF</a>
+        <span class="small" style="margin-left:.75rem">If the preview doesn’t load on mobile, use the download button.</span>
       </div>
     </div>
   </section>
@@ -45,4 +41,3 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
