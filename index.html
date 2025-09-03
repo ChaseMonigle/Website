@@ -7,6 +7,20 @@
   <meta name="description" content="Chase Monigle — projects, experience, resume, and life outside the classroom." />
   <link rel="icon" href="Photos/Shark.png" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <!-- Page-specific overrides to deliver your requested changes immediately -->
+  <style>
+    /* Background image with subtle dark overlay */
+    body{
+      background:
+        linear-gradient(rgba(15,23,42,.35), rgba(15,23,42,.35)),
+        url("Photos/Joe.jpeg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    /* Helper to “crop” the fishing image toward faces/fish if used on Home */
+    .thumb-focus-fishing{ object-fit:cover; object-position:50% 35%; }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -24,6 +38,7 @@
         <a href="Pages/about.html">About</a>
         <a href="Pages/cybersecurity.html">Cyber</a>
         <a href="Pages/hobbies.html">Hobbies</a>
+        <a href="Pages/Fraternity.html">Fraternity</a>
       </nav>
     </div>
   </header>
@@ -49,7 +64,7 @@
       </div>
       <div>
         <img class="responsive-img" src="Photos/Suit.jpeg" alt="Chase Monigle headshot" />
-        <p class="small" style="margin-top:.5rem">Paths are case-sensitive: <code>Photos/Suit.jpeg</code> (capital P).</p>
+        <!-- (Removed the case-sensitivity note per your request) -->
       </div>
     </div>
   </section>
@@ -58,7 +73,8 @@
   <section id="projects" class="section">
     <div class="container">
       <h2>Featured Projects</h2>
-      <div class="grid grid-3" style="margin-top:1rem">
+      <!-- 2-column grid (incident triage removed) -->
+      <div class="grid grid-2" style="margin-top:1rem">
         <article class="card">
           <img class="thumb" src="Photos/Wave.png" alt="Wave graphic representing real-time data" />
           <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
@@ -83,19 +99,6 @@
           <ul class="ul-plain">
             <li><span class="dot"></span> Deployed via GitHub Pages</li>
             <li><span class="dot"></span> Tight typography and sections</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <img class="thumb" src="Photos/Shark.png" alt="Shark icon representing security tooling" />
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:.75rem">
-            <h3 style="margin:0">Incident Triage Scripts</h3>
-            <span class="pill">2024</span>
-          </div>
-          <p>Utilities for hashing, IOC lookup, and log slicing to accelerate first-response triage.</p>
-          <ul class="ul-plain">
-            <li><span class="dot"></span> Safe defaults and structured output</li>
-            <li><span class="dot"></span> Python + Bash with small unit tests</li>
           </ul>
         </article>
       </div>
@@ -140,7 +143,7 @@
           <p>Clean lines and heavy swell build patience and pattern recognition.</p>
         </article>
         <article class="card">
-          <img class="thumb" src="Photos/KingFish.png" alt="Fishing a kingfish" />
+          <img class="thumb thumb-focus-fishing" src="Photos/KingFish.png" alt="Fishing a kingfish" />
           <h3 style="margin-top:.75rem">Fishing</h3>
           <p>Reading tides and structure feels like debugging — quiet and methodical.</p>
         </article>
