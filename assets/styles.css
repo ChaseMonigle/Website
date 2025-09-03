@@ -1,30 +1,8 @@
-/* Minimal, professional, mobile-first styles */
-:root{
-  --bg:#f8fafc;      /* slate-50 */
-  --card:#ffffff;
-  --ink:#0f172a;     /* slate-900 */
-  --muted:#475569;   /* slate-600 */
-  --line:#e2e8f0;    /* slate-200 */
-  --accent:#1e40af;  /* blue-800 */
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{
   margin:0;
-  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;
+  font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
   color:var(--ink);
-  /* Subtle dark overlay + background photo (adjust path/filename if needed) */
-  background:
-    linear-gradient(rgba(15,23,42,.35), rgba(15,23,42,.35)),
-    url("../Photos/Joe.jpeg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-/* Focus the important part of the fishing photo */
-.thumb-focus-fishing{
-  object-fit: cover;        /* already default for .thumb */
-  object-position: 50% 35%; /* tweak this % if faces need centering */
+  background:linear-gradient(#eef2f7, var(--bg));
 }
 
 
