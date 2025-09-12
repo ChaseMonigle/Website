@@ -7,12 +7,11 @@
   <link rel="icon" href="../Photos/Shark.png" />
   <link rel="stylesheet" href="../assets/styles.css" />
   <style>
-    /* About photo — no cropping, keep natural proportions */
-    .about-photo {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      border: 1px solid var(--line);
+    .about-photo{
+      max-width:100%;
+      height:auto;
+      border-radius:12px;
+      border:1px solid var(--line);
     }
   </style>
 </head>
@@ -24,7 +23,12 @@
         <img src="../Photos/Shark.png" alt="Shark favicon" />
         CM
       </a>
-      <nav class="links" style="display:flex; gap:1rem">
+
+      <!-- Mobile menu button -->
+      <button class="menu-btn" aria-controls="site-links" aria-expanded="false" id="menuBtn">☰</button>
+
+      <!-- Links -->
+      <nav class="links" id="site-links">
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#outside">Outside</a>
@@ -39,7 +43,6 @@
   <!-- About Content -->
   <section class="section">
     <div class="container grid grid-2">
-      <!-- Left: Bio -->
       <div>
         <h1 style="margin-top:0">About</h1>
         <p>
@@ -96,7 +99,7 @@
         </div>
       </div>
 
-      <!-- Right: Image, centered vertically -->
+      <!-- Right image, centered -->
       <div style="display:flex; align-items:center; justify-content:center">
         <img class="about-photo" src="../Photos/SGA.jpeg" alt="Chase participating in SGA event" />
       </div>
@@ -104,6 +107,16 @@
   </section>
 
   <footer class="footer">© <span id="y"></span> Chase Monigle</footer>
+
+  <!-- Mobile menu script -->
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const links = document.getElementById('site-links');
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
