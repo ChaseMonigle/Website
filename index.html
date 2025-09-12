@@ -8,41 +8,57 @@
   <link rel="icon" href="Photos/Shark.png" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-  <script>
-  const btn   = document.getElementById('menuBtn');
-  const links = document.getElementById('site-links');
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn   = document.getElementById('menuBtn');
+    const links = document.getElementById('site-links');
+    if (!btn || !links) return;
 
-  // Ensure menu starts closed on load
-  links.classList.remove('open');
-  btn.setAttribute('aria-expanded', 'false');
+    // Start closed on load (mobile)
+    links.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
 
-  // Toggle open/closed on button press
-  btn.addEventListener('click', () => {
-    const isOpen = links.classList.toggle('open');
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
+    const toggleMenu = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    };
 
-  // Auto-close menu after tapping a link on mobile
-  document.querySelectorAll('#site-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      if (window.matchMedia('(max-width: 720px)').matches) {
+    btn.addEventListener('click', toggleMenu);
+
+    // Close when a nav link is tapped (mobile)
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 720px)').matches) {
+          links.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Close when clicking outside (mobile)
+    document.addEventListener('click', (e) => {
+      if (!window.matchMedia('(max-width: 720px)').matches) return;
+      if (!links.contains(e.target) && !btn.contains(e.target)) {
         links.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
       }
     });
-  });
 
-  // If window is resized to desktop, make sure links are visible without needing "open"
-  const mq = window.matchMedia('(min-width: 721px)');
-  const ensureDesktopState = () => {
-    if (mq.matches) {
-      links.classList.remove('open'); // desktop shows via CSS, not the "open" class
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  };
-  mq.addEventListener('change', ensureDesktopState);
-  ensureDesktopState();
+    // On resize to desktop, reset to closed state (CSS shows menu on desktop)
+    const mq = window.matchMedia('(min-width: 721px)');
+    const onResize = () => {
+      if (mq.matches) {
+        links.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    };
+    mq.addEventListener('change', onResize);
+    onResize();
+  });
 </script>
+
 
 <body>
   <!-- Navbar -->
