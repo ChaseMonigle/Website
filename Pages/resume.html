@@ -6,15 +6,22 @@
   <title>Resume — Chase Monigle</title>
   <link rel="icon" href="../Photos/Shark.png" />
   <link rel="stylesheet" href="../assets/styles.css" />
+  <style>
+    .pdf-frame{width:100%; height:80vh; border:1px solid var(--line); border-radius:12px; background:#fff}
+  </style>
 </head>
 <body>
+  <!-- Navbar -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="../index.html">
         <img src="../Photos/Shark.png" alt="Shark favicon" />
         CM
       </a>
-      <nav class="links" style="display:flex; gap:1rem">
+
+      <button class="menu-btn" aria-controls="site-links" aria-expanded="false" id="menuBtn">☰</button>
+
+      <nav class="links" id="site-links">
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#outside">Outside</a>
@@ -29,11 +36,24 @@
   <section class="section">
     <div class="container">
       <h1>Resume</h1>
-      <iframe src="../PDF/Chase_Monigle_Resume.pdf#view=FitH" style="width:100%; height:80vh; border:1px solid var(--line); border-radius:12px"></iframe>
+      <iframe class="pdf-frame" src="../PDF/Chase_Monigle_Resume.pdf#view=FitH"></iframe>
+      <div style="margin-top:1rem">
+        <a class="pill" href="../PDF/Chase_Monigle_Resume.pdf" download>Download PDF</a>
+      </div>
     </div>
   </section>
 
   <footer class="footer">© <span id="y"></span> Chase Monigle</footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const links = document.getElementById('site-links');
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
