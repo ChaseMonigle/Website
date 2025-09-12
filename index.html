@@ -16,16 +16,20 @@
         <img src="Photos/Shark.png" alt="Shark favicon" />
         CM
       </a>
-     <nav class="links" style="display:flex; gap:1rem">
-  <a href="#projects">Projects</a>
-  <a href="#experience">Experience</a>
-  <a href="#outside">Outside</a>
-  <a href="Pages/resume.html">Resume</a>
-  <a href="Pages/about.html">About</a>
-  <a href="Pages/cybersecurity.html">Cyber</a>
-  <a href="./Pages/Fraternity.html">Fraternity</a>
-</nav>
 
+      <!-- Mobile menu button -->
+      <button class="menu-btn" aria-controls="site-links" aria-expanded="false" id="menuBtn">☰</button>
+
+      <!-- Links -->
+      <nav class="links" id="site-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#outside">Outside</a>
+        <a href="Pages/resume.html">Resume</a>
+        <a href="Pages/about.html">About</a>
+        <a href="Pages/cybersecurity.html">Cyber</a>
+        <a href="Pages/Fraternity.html">Fraternity</a>
+      </nav>
     </div>
   </header>
 
@@ -82,32 +86,32 @@
   </section>
 
   <!-- Experience -->
-<section id="experience" class="section">
-  <div class="container">
-    <h2>Experience</h2>
-    <div class="grid grid-2" style="margin-top:1rem">
-      <article class="card">
-        <h3>Manager • Beach Equipment Rental Company</h3>
-        <span class="pill">Summer 2021 — Present</span>
-        <ul class="ul-plain">
-          <li><span class="dot"></span> Scheduling, hiring, and daily operations</li>
-          <li><span class="dot"></span> Inventory management and task delegation</li>
-          <li><span class="dot"></span> Customer conflict resolution; promoted for reliability</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Organizations & Roles</h3>
-        <ul class="ul-plain">
-          <li><span class="dot"></span> Student Government Association — Greek Life Liaison</li>
-          <li><span class="dot"></span> Theta Xi (Founding Father)</li>
-          <li><span class="dot"></span> FITSEC Cybersecurity Club</li>
-          <li><span class="dot"></span> NCL Team Captain (Spring 2025)</li>
-          <li><span class="dot"></span> Computer Science Networking Club - Member</li>
-        </ul>
-      </article>
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="grid grid-2" style="margin-top:1rem">
+        <article class="card">
+          <h3>Manager • Beach Equipment Rental Company</h3>
+          <span class="pill">Summer 2021 — Present</span>
+          <ul class="ul-plain">
+            <li><span class="dot"></span> Scheduling, hiring, and daily operations</li>
+            <li><span class="dot"></span> Inventory management and task delegation</li>
+            <li><span class="dot"></span> Customer conflict resolution; promoted for reliability</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Organizations & Roles</h3>
+          <ul class="ul-plain">
+            <li><span class="dot"></span> Student Government Association — Greek Life Liaison</li>
+            <li><span class="dot"></span> Theta Xi (Founding Member)</li>
+            <li><span class="dot"></span> FITSEC Cybersecurity Club</li>
+            <li><span class="dot"></span> NCL Team Captain (Spring 2025)</li>
+            <li><span class="dot"></span> Google Cybersecurity Certificate (July 2024)</li>
+          </ul>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Outside -->
   <section id="outside" class="section">
@@ -120,7 +124,6 @@
           <p>Clean lines and heavy swell build patience and pattern recognition.</p>
         </article>
         <article class="card">
-          <!-- Fishing replaced with shark photo -->
           <img class="thumb" src="Photos/Shark.png" alt="Chase and friend with shark" />
           <h3 style="margin-top:.75rem">Fishing</h3>
           <p>Adventures on the water with good friends and exciting catches.</p>
@@ -135,9 +138,20 @@
   </section>
 
   <footer class="footer">© <span id="y"></span> Chase Monigle — Built with GitHub Pages</footer>
+
+  <!-- Mobile menu script -->
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const links = document.getElementById('site-links');
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
 
 
 
