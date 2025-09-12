@@ -6,8 +6,23 @@
   <title>About — Chase Monigle</title>
   <link rel="icon" href="../Photos/Shark.png" />
   <link rel="stylesheet" href="../assets/styles.css" />
+  <style>
+    /* Make the right-side image fill its column nicely */
+    .about-photo {
+      width: 100%;
+      height: 100%;
+      max-height: 700px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    @media (max-width: 767px){
+      .about-photo { max-height: 360px; }
+    }
+  </style>
 </head>
 <body>
+  <!-- Navbar -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="../index.html">
@@ -26,10 +41,70 @@
     </div>
   </header>
 
+  <!-- About Content -->
   <section class="section">
-    <div class="container">
-      <h1>About</h1>
-      <p>Placeholder content — your bio and background go here.</p>
+    <div class="container grid grid-2">
+      <!-- Left: Bio -->
+      <div>
+        <h1 style="margin-top:0">About</h1>
+        <p>
+          I’m <strong>Chase Monigle</strong>, a Computer Science student at the
+          <strong>Florida Institute of Technology</strong> with a concentration in
+          <strong>Cybersecurity</strong> (B.S., expected May 2026). One of the things I love about
+          cybersecurity is how vast the field is — every time I sit down to learn or build,
+          I discover something new. The constant variety keeps me motivated, and I especially
+          enjoy collaborating with others to tackle complex problems together.
+        </p>
+        <p>
+          I’m eager to grow my skills in areas like <strong>network security</strong> and plan to dive deeper
+          into tools such as <strong>Wireshark</strong> as I continue exploring how data moves through systems
+          — and how to protect networks from unwanted company.
+        </p>
+        <p>
+          Outside of academics, I’ve had a great time in Florida so far — both in the classroom
+          and as part of the community. Whether it’s my involvement in <strong>SGA</strong> and <strong>Theta Xi</strong>,
+          my cybersecurity club activities, or enjoying the beach lifestyle, Florida Tech has been
+          an incredible place to learn, grow, and build lasting connections.
+        </p>
+
+        <div class="card" style="margin-top:1rem">
+          <h2 style="margin:0 0 .5rem 0">Quick Facts</h2>
+          <ul class="ul-plain">
+            <li><span class="dot"></span> <strong>School:</strong> Florida Tech — B.S. Computer Science (Cybersecurity)</li>
+            <li><span class="dot"></span> <strong>Interests:</strong> Web app security, endpoint hardening, networks</li>
+            <li><span class="dot"></span> <strong>Strengths:</strong> Working with others, learning new things, problem solving</li>
+            <li><span class="dot"></span> <strong>Leadership:</strong> SGA Greek Life Liaison • Theta Xi (Founding Member)</li>
+            <li><span class="dot"></span> <strong>Clubs/Comp:</strong> FITSEC • National Cyber League (Captain, Spring 2025)</li>
+            <li><span class="dot"></span> <strong>Cert:</strong> Google Cybersecurity Certificate (July 2024)</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:1rem">
+          <h2 style="margin:0 0 .5rem 0">Skills</h2>
+          <div class="tagrow">
+            <span class="pill">Python</span>
+            <span class="pill">Java</span>
+            <span class="pill">C++</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Linux</span>
+            <span class="pill">Windows</span>
+            <span class="pill">GitHub Pages</span>
+            <span class="pill">REST/WebSocket</span>
+            <span class="pill">Wireshark</span>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap">
+          <a class="pill" href="mailto:Chasemonigle1@gmail.com">Email</a>
+          <a class="pill" href="https://github.com/ChaseMonigle" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="pill" href="https://www.linkedin.com/in/chase-monigle-8b3421323/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- Right: Full-height image -->
+      <div>
+        <img class="about-photo" src="../Photos/SGA.jpeg" alt="Chase participating in SGA event" />
+      </div>
     </div>
   </section>
 
