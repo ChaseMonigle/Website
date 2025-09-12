@@ -24,10 +24,8 @@
         CM
       </a>
 
-      <!-- Mobile menu button -->
       <button class="menu-btn" aria-controls="site-links" aria-expanded="false" id="menuBtn">☰</button>
 
-      <!-- Links -->
       <nav class="links" id="site-links">
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#experience">Experience</a>
@@ -108,19 +106,17 @@
 
   <footer class="footer">© <span id="y"></span> Chase Monigle</footer>
 
-  <!-- Mobile menu script -->
   <script>
     const btn = document.getElementById('menuBtn');
     const links = document.getElementById('site-links');
     btn.addEventListener('click', () => {
-      const open = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', links.classList.contains('open'));
     });
   </script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
 
 
 
