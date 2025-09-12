@@ -33,7 +33,10 @@
         <img src="../Photos/Shark.png" alt="Shark favicon" />
         CM
       </a>
-      <nav class="links" style="display:flex; gap:1rem">
+
+      <button class="menu-btn" aria-controls="site-links" aria-expanded="false" id="menuBtn">☰</button>
+
+      <nav class="links" id="site-links">
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#outside">Outside</a>
@@ -52,39 +55,39 @@
       <div>
         <h1 style="margin-top:0">Fraternity</h1>
         <p>
-          During my freshman year, I decided to take a leap of faith and become a
+          During my freshman year, I decided to take a chance and become a
           <strong>Founding Father</strong> of the Theta Xi chapter at Florida Tech,
-          which began with only eight members. It was a challenge and an
-          opportunity — one that pushed me to grow both personally and
-          professionally.
+          starting with only eight members. It was an opportunity filled with
+          challenges, but also one that pushed me to grow as a leader and
+          teammate.
         </p>
         <p>
-          Over time, I helped expand the fraternity into a <strong>40+ member
-          brotherhood</strong>. This experience taught me the value of teamwork,
-          accountability, and persistence. As our membership grew, so did my
-          responsibilities, eventually leading me to serve as <strong>Brotherhood
-          Chair</strong>, where I worked to create events and traditions that
-          strengthened our bonds and built a lasting culture of support.
+          Over time, I helped expand the chapter into a <strong>40+ member
+          fraternity</strong>. Through this growth, I learned the importance of
+          accountability, communication, and building a culture where every
+          member feels valued. My involvement eventually led me to serve as
+          <strong>Brotherhood Chair</strong>, where I worked to design events
+          and traditions that strengthened the relationships and unity within
+          our brotherhood.
         </p>
         <p>
-          The journey wasn’t always easy, but it was deeply rewarding. I developed
-          leadership, organizational, and conflict-resolution skills that I carry
-          into every aspect of my academic and professional life. This past year,
-          our fraternity achieved a milestone by being <strong>officially
-          chartered</strong> — a recognition of the hard work and dedication of
-          every member. As an added honor, I was featured on the <strong>front
-          cover of Theta Xi’s national magazine</strong>, symbolizing not just my
-          contributions but the collective success of our chapter.
+          The experience taught me organizational and leadership skills that
+          continue to shape how I approach challenges today. This past year,
+          our chapter reached a major milestone when we were
+          <strong>officially chartered</strong>. As a highlight of that moment,
+          I had the honor of being featured on the <strong>front cover of Theta
+          Xi’s national magazine</strong> — a recognition not just of my
+          personal efforts, but of the collective dedication of our members.
         </p>
 
         <!-- Extra photo under description -->
         <div class="extra-photo">
-          <img class="fraternity-photo" src="../Photos/MTG.png" alt="Theta Xi group meeting" />
-          <p class="photo-caption">Building a chapter — Theta Xi meeting and brotherhood growth.</p>
+          <img class="fraternity-photo" src="../Photos/MTG.png" alt="Theta Xi meeting group photo" />
+          <p class="photo-caption">Building our chapter — Theta Xi meeting and brotherhood growth.</p>
         </div>
       </div>
 
-      <!-- Right: Photo -->
+      <!-- Right: Main photo -->
       <div style="display:flex; flex-direction:column; align-items:center; justify-content:center">
         <img class="fraternity-photo" src="../Photos/Unicorn.jpeg" alt="Chase with fraternity brothers" />
         <p class="photo-caption">Featured on the front cover of Theta Xi’s national magazine (Chartering Issue).</p>
@@ -93,6 +96,16 @@
   </section>
 
   <footer class="footer">© <span id="y"></span> Chase Monigle</footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const links = document.getElementById('site-links');
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
