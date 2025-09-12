@@ -116,50 +116,73 @@ body{
 /* Desktop spacing for top nav links */
 .links{
   display:flex;
-  gap: 1.1rem;        /* space between tabs (bump to 1.25rem if you want more) */
+  gap: 1.1rem;
   align-items:center;
 }
 
 .links a{
-  padding: .25rem .35rem; /* tiny hit-area padding */
+  padding: .25rem .35rem;
 }
 
-/* You already have mobile styles; keep them.
-   This just improves spacing on tablet/desktop. */
-/* Mobile nav */
-.menu-btn{
-  display:none;
-  border:1px solid var(--line);
-  background:var(--card);
-  border-radius:8px;
-  padding:.4rem .6rem;
-  font:inherit;
-  cursor:pointer;
+/* === Contact Section === */
+#contact.contact-section {
+  margin: 4rem auto;
+  padding: 2rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(2,8,23,.06);
+  max-width: 860px;
 }
 
-@media (max-width: 720px){
-  .nav{gap:.5rem}
-  .menu-btn{display:inline-block}
-  .links{
-    position: absolute;
-    top:56px;              /* height of header */
-    right:0;
-    left:0;
-    background:rgba(255,255,255,.98);
-    border-bottom:1px solid var(--line);
-    box-shadow:0 4px 10px rgba(2,8,23,.06);
-    display:none;          /* hidden by default on mobile */
-    flex-direction:column;
-    padding:.75rem 1rem;
-    gap:.5rem;
+#contact .contact-title {
+  margin-bottom: 1.25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+#contact .contact-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media(min-width:640px){
+  #contact .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .links.open{display:flex}
-  .links a{padding:.4rem .25rem}
 }
 
-/* Allow wrapping on small tablets */
-@media (min-width:721px) and (max-width:980px){
-  .links{flex-wrap:wrap; row-gap:.25rem}
+#contact .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
+#contact .contact-item:hover {
+  background: #eef2ff;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#contact .contact-icon {
+  flex: 0 0 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #e0e7ff;
+}
+
+#contact .contact-text { display:flex; flex-direction:column; }
+#contact .contact-label { font-size:0.8rem; color:var(--muted); }
+#contact .contact-value { font-weight:600; font-size:1rem; color:var(--ink); }
 
 
