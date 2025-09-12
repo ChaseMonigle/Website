@@ -126,5 +126,40 @@ body{
 
 /* You already have mobile styles; keep them.
    This just improves spacing on tablet/desktop. */
+/* Mobile nav */
+.menu-btn{
+  display:none;
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:8px;
+  padding:.4rem .6rem;
+  font:inherit;
+  cursor:pointer;
+}
+
+@media (max-width: 720px){
+  .nav{gap:.5rem}
+  .menu-btn{display:inline-block}
+  .links{
+    position: absolute;
+    top:56px;              /* height of header */
+    right:0;
+    left:0;
+    background:rgba(255,255,255,.98);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 4px 10px rgba(2,8,23,.06);
+    display:none;          /* hidden by default on mobile */
+    flex-direction:column;
+    padding:.75rem 1rem;
+    gap:.5rem;
+  }
+  .links.open{display:flex}
+  .links a{padding:.4rem .25rem}
+}
+
+/* Allow wrapping on small tablets */
+@media (min-width:721px) and (max-width:980px){
+  .links{flex-wrap:wrap; row-gap:.25rem}
+}
 
 
