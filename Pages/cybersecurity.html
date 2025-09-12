@@ -8,13 +8,17 @@
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
+  <!-- Navbar -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="../index.html">
         <img src="../Photos/Shark.png" alt="Shark favicon" />
         CM
       </a>
-      <nav class="links" style="display:flex; gap:1rem">
+
+      <button class="menu-btn" aria-controls="site-links" aria-expanded="false" id="menuBtn">☰</button>
+
+      <nav class="links" id="site-links">
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#outside">Outside</a>
@@ -34,6 +38,16 @@
   </section>
 
   <footer class="footer">© <span id="y"></span> Chase Monigle</footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const links = document.getElementById('site-links');
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
