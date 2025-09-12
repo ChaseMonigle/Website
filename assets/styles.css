@@ -113,5 +113,18 @@ body{
 @media (min-width:721px) and (max-width:980px){
   .links{flex-wrap:wrap; row-gap:.25rem}
 }
+/* Desktop spacing for top nav links */
+.links{
+  display:flex;
+  gap: 1.1rem;        /* space between tabs (bump to 1.25rem if you want more) */
+  align-items:center;
+}
+
+.links a{
+  padding: .25rem .35rem; /* tiny hit-area padding */
+}
+
+/* You already have mobile styles; keep them.
+   This just improves spacing on tablet/desktop. */
 
 
