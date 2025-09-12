@@ -6,6 +6,20 @@
   <title>Fraternity — Chase Monigle</title>
   <link rel="icon" href="../Photos/Shark.png" />
   <link rel="stylesheet" href="../assets/styles.css" />
+  <style>
+    .fraternity-photo {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    .photo-caption {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -30,22 +44,30 @@
   <!-- Fraternity Content -->
   <section class="section">
     <div class="container grid grid-2">
+      <!-- Left: Description -->
       <div>
-        <h1>Fraternity</h1>
+        <h1 style="margin-top:0">Fraternity</h1>
         <p>
-          Placeholder text about fraternity involvement. 
-          You can expand this later to talk about your role, 
-          leadership experiences, events you helped organize, 
-          and the friendships you built.
+          During my freshman year, I took a leap of faith and became a
+          <strong>Founding Father</strong> of the Theta Xi chapter at Florida Tech,
+          which started with only eight members. Over the years, I helped grow
+          the fraternity into a <strong>40+ member brotherhood</strong>, where I
+          eventually served as <strong>Brotherhood Chair</strong>.
         </p>
         <p>
-          This section can also highlight the impact of your 
-          fraternity experience on teamwork, time management, 
-          and leadership growth.
+          Through this role I developed valuable leadership, organizational, and
+          interpersonal skills while building a chapter that would leave a
+          lasting impact on campus. This past year, our fraternity achieved a
+          major milestone by being <strong>officially chartered</strong> — and I
+          had the honor of being featured on the <strong>front cover of Theta Xi’s
+          national magazine</strong>.
         </p>
       </div>
-      <div>
-        <img class="responsive-img" src="../Photos/Unicorn.jpeg" alt="Placeholder Unicorn image" />
+
+      <!-- Right: Photo -->
+      <div style="display:flex; flex-direction:column; align-items:center; justify-content:center">
+        <img class="fraternity-photo" src="../Photos/Unicorn.jpeg" alt="Chase with fraternity brothers" />
+        <p class="photo-caption">Featured on the front cover of Theta Xi’s national magazine (Chartering Issue).</p>
       </div>
     </div>
   </section>
