@@ -49,8 +49,8 @@
     const btn = document.getElementById('menuBtn');
     const links = document.getElementById('site-links');
     btn.addEventListener('click', () => {
-      const open = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', links.classList.contains('open'));
     });
   </script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
