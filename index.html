@@ -8,57 +8,6 @@
   <link rel="icon" href="Photos/Shark.png" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn   = document.getElementById('menuBtn');
-    const links = document.getElementById('site-links');
-    if (!btn || !links) return;
-
-    // Start closed on load (mobile)
-    links.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
-
-    const toggleMenu = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const isOpen = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    };
-
-    btn.addEventListener('click', toggleMenu);
-
-    // Close when a nav link is tapped (mobile)
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (window.matchMedia('(max-width: 720px)').matches) {
-          links.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-
-    // Close when clicking outside (mobile)
-    document.addEventListener('click', (e) => {
-      if (!window.matchMedia('(max-width: 720px)').matches) return;
-      if (!links.contains(e.target) && !btn.contains(e.target)) {
-        links.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // On resize to desktop, reset to closed state (CSS shows menu on desktop)
-    const mq = window.matchMedia('(min-width: 721px)');
-    const onResize = () => {
-      if (mq.matches) {
-        links.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    };
-    mq.addEventListener('change', onResize);
-    onResize();
-  });
-</script>
-
 
 <body>
   <!-- Navbar -->
@@ -235,21 +184,60 @@
 
   <footer class="footer">© <span id="y"></span> Chase Monigle — Built with GitHub Pages</footer>
 
-  <!-- Mobile menu script -->
-<script>
-  const btn = document.getElementById('menuBtn');
-  const links = document.getElementById('site-links');
+  <!-- Scripts -->
+  <script>
+    // Set footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-  // Ensure menu starts closed
-  links.classList.remove('open');
-  btn.setAttribute('aria-expanded', 'false');
+    // Mobile menu logic
+    const btn   = document.getElementById('menuBtn');
+    const links = document.getElementById('site-links');
 
-  btn.addEventListener('click', () => {
-    const isOpen = links.classList.toggle('open');
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-</script>
+    if (btn && links) {
+      // Start closed on load (mobile)
+      links.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
 
+      const toggleMenu = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      };
+
+      btn.addEventListener('click', toggleMenu);
+
+      // Close after tapping a link (mobile)
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          if (window.matchMedia('(max-width: 720px)').matches) {
+            links.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // Close when clicking outside (mobile)
+      document.addEventListener('click', (e) => {
+        if (!window.matchMedia('(max-width: 720px)').matches) return;
+        if (!links.contains(e.target) && !btn.contains(e.target)) {
+          links.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Reset state when resizing to desktop
+      const mq = window.matchMedia('(min-width: 721px)');
+      const onResize = () => {
+        if (mq.matches) {
+          links.classList.remove('open'); // desktop layout shows via CSS
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      };
+      mq.addEventListener('change', onResize);
+      onResize();
+    }
+  </script>
 </body>
 </html>
 
