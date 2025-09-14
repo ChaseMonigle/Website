@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/Website/assets/styles.css" />
 </head>
 <body>
-  <!-- Navbar (project-root absolute links so they work on every page) -->
+  <!-- Navbar -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="/Website/index.html">
@@ -33,100 +33,49 @@
     </div>
   </header>
 
-  <!-- Hero / Intro -->
-  <section class="section hero">
-    <div class="container grid grid-2">
-      <div>
-        <h1>Cybersecurity</h1>
-        <p class="small">Curiosity-driven, tool-focused, and team-oriented.</p>
-        <p>
-          I’m interested in building and securing systems people actually use—prioritizing
-          clarity, repeatability, and usable defenses. Recent work includes imaging/triage,
-          network traffic analysis, and hands-on CTFs with FITSEC.
-        </p>
-        <div class="tagrow">
-          <span class="pill">Endpoint Hardening</span>
-          <span class="pill">Forensics Imaging</span>
-          <span class="pill">Network Analysis</span>
-          <span class="pill">CTFs / NCL</span>
-        </div>
-      </div>
-      <div>
-        <img class="responsive-img" src="/Website/Photos/FL.png" alt="Florida Tech symbol" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills & Tools -->
-  <section class="section">
-    <div class="container grid grid-2">
-      <article class="card">
-        <h2 style="margin-top:0">Skills & Tools</h2>
-        <ul class="ul-plain">
-          <li><span class="dot"></span><strong>FTK Imager</strong> — disk imaging, verification, and triage workflows.</li>
-          <li><span class="dot"></span><strong>Wireshark</strong> — packet capture, protocol inspection, filters, and basic IR pivots.</li>
-          <li><span class="dot"></span><strong>Scripting & Automation</strong> — small utilities to streamline repetitive tasks.</li>
-          <li><span class="dot"></span><strong>Usable Security</strong> — turning complex steps into simple checklists/UIs.</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2 style="margin-top:0">Certification</h2>
-        <p class="small">Google Cybersecurity Certificate</p>
-        <img class="responsive-img" src="/Website/Photos/Chase Monigle Google Cyber Security Certificate.jpeg"
-             alt="Google Cybersecurity Certificate — Chase Monigle" />
-        <p style="margin-top:.75rem">
-          Completed coursework covering security foundations, incident response, SIEM basics, and network fundamentals—
-          applied through practical labs and scenario-based assessments.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Team & Competitions -->
-  <section class="section">
-    <div class="container grid grid-2">
-      <article class="card">
-        <h2 style="margin-top:0">FITSEC — Cybersecurity Team</h2>
-        <img class="responsive-img" src="/Website/Photos/FITSEC.png" alt="FITSEC club logo" />
-        <p style="margin-top:.75rem">
-          I’m an active member of <strong>FITSEC</strong>, our campus cybersecurity organization that competes in
-          CTFs and runs workshops on topics like forensics, web exploitation, and OSINT. We emphasize collaborative
-          problem-solving and clear writeups to help newer members ramp quickly.
-        </p>
-      </article>
-
-      <article class="card">
-        <h2 style="margin-top:0">NCL — Team Captain</h2>
-        <p>
-          Served as <strong>Team Captain</strong> for the National Cyber League (Spring 2025). I helped with
-          scoping practice sessions, delegating challenges (crypto, log analysis, network traffic, recon), and
-          collecting notes so we could convert wins into shareable playbooks.
-        </p>
-        <ul class="ul-plain">
-          <li><span class="dot"></span>Coordinated challenge coverage and timeboxing.</li>
-          <li><span class="dot"></span>Standardized notes for faster future solves.</li>
-          <li><span class="dot"></span>Focused on repeatable techniques over one-off tricks.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- Projects & Writeups (placeholder you can fill later) -->
+  <!-- Cybersecurity Page -->
   <section class="section">
     <div class="container">
-      <h2>Projects & Writeups</h2>
-      <div class="grid grid-2" style="margin-top:1rem">
-        <article class="card">
-          <h3 style="margin-top:0">Traffic Analysis Notes (Wireshark)</h3>
-          <p>Filters, protocol triage, and quick steps I use to pivot from PCAPs to findings.</p>
-          <p class="small">Coming soon — documenting a few short case studies.</p>
-        </article>
-        <article class="card">
-          <h3 style="margin-top:0">Imaging Checklist (FTK Imager)</h3>
-          <p>Source → Verify → Hash → Store — a repeatable, low-friction imaging flow.</p>
-          <p class="small">Coming soon — downloadable checklist + screenshots.</p>
-        </article>
+      <h1>Cybersecurity</h1>
+      <p>
+        My interest in cybersecurity comes from a mix of curiosity and practicality — I enjoy exploring how systems
+        really work, and how to keep them secure and usable at the same time. I’ve worked with tools like
+        <strong>FTK Imager</strong> for forensic disk imaging and verification, and <strong>Wireshark</strong> for
+        analyzing network traffic. These tools have helped me build confidence in both digital forensics and
+        network security.
+      </p>
+
+      <p>
+        At Florida Tech, I’m part of <strong>FITSEC</strong>, our campus cybersecurity team. We compete in
+        Capture the Flag (CTF) competitions and hold workshops to practice challenges ranging from forensics
+        and web exploitation to OSINT and log analysis. I also served as <strong>Team Captain</strong> for
+        the National Cyber League (Spring 2025), where I helped organize practice sessions and guide teammates
+        through solving challenges.
+      </p>
+
+      <p>
+        To strengthen my foundation, I completed the <strong>Google Cybersecurity Certificate</strong>, which
+        covered security fundamentals, incident response, SIEM usage, and core networking concepts. Combined with
+        hands-on team competitions, these experiences have given me both technical depth and leadership
+        experience in the field.
+      </p>
+
+      <!-- Certificate Highlight -->
+      <div class="card" style="max-width:420px; margin-top:2rem">
+        <img class="responsive-img"
+             src="/Website/Photos/Chase Monigle Google Cyber Security Certificate.jpeg"
+             alt="Google Cybersecurity Certificate — Chase Monigle" />
+        <p class="small" style="margin-top:.5rem; text-align:center">
+          Google Cybersecurity Certificate
+        </p>
+      </div>
+
+      <!-- Logos -->
+      <div style="display:flex; gap:2rem; margin-top:2rem; flex-wrap:wrap; align-items:center">
+        <img src="/Website/Photos/FL.png" alt="Florida Tech logo"
+             style="height:80px; width:auto; border-radius:8px; border:1px solid var(--line)" />
+        <img src="/Website/Photos/FITSEC.png" alt="FITSEC logo"
+             style="height:80px; width:auto; border-radius:8px; border:1px solid var(--line)" />
       </div>
     </div>
   </section>
@@ -134,12 +83,9 @@
   <!-- Footer -->
   <footer class="footer">© <span id="y"></span> Chase Monigle — Built with GitHub Pages</footer>
 
-  <!-- Scripts (same mobile menu logic as home) -->
+  <!-- Scripts -->
   <script>
-    // Footer year
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Mobile menu
     const btn = document.getElementById('menuBtn');
     const links = document.getElementById('site-links');
 
@@ -147,16 +93,13 @@
       links.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
 
-      const toggleMenu = (e) => {
+      btn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         const isOpen = links.classList.toggle('open');
         btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      };
+      });
 
-      btn.addEventListener('click', toggleMenu);
-
-      // Close after link tap (mobile)
       links.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
           if (window.matchMedia('(max-width: 720px)').matches) {
@@ -166,7 +109,6 @@
         });
       });
 
-      // Click outside to close (mobile)
       document.addEventListener('click', (e) => {
         if (!window.matchMedia('(max-width: 720px)').matches) return;
         if (!links.contains(e.target) && !btn.contains(e.target)) {
@@ -178,4 +120,5 @@
   </script>
 </body>
 </html>
+
 
