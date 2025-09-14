@@ -5,51 +5,177 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cybersecurity — Chase Monigle</title>
-  <link rel="icon" href="../Photos/Shark.png" />
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <meta name="description" content="Cybersecurity interests, tools, certifications, and team competitions." />
+  <link rel="icon" href="/Website/Photos/Shark.png" />
+  <link rel="stylesheet" href="/Website/assets/styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Navbar (project-root absolute links so they work on every page) -->
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="../index.html">
-        <img src="../Photos/Shark.png" alt="Shark favicon" />
+      <a class="brand" href="/Website/index.html">
+        <img src="/Website/Photos/Shark.png" alt="Shark favicon" />
         CM
       </a>
 
       <button class="menu-btn" aria-controls="site-links" aria-expanded="false" id="menuBtn">☰</button>
 
       <nav class="links" id="site-links">
-        <a href="../index.html#projects">Projects</a>
-        <a href="../index.html#experience">Experience</a>
-        <a href="../index.html#outside">Outside</a>
-        <a href="resume.html">Resume</a>
-        <a href="about.html">About</a>
-        <a href="cybersecurity.html">Cyber</a>
-        <a href="Fraternity.html">Fraternity</a>
+        <a href="/Website/#projects">Projects</a>
+        <a href="/Website/#experience">Experience</a>
+        <a href="/Website/#outside">Outside</a>
+        <a href="/Website/Pages/resume.html">Resume</a>
+        <a href="/Website/Pages/about.html">About</a>
+        <a href="/Website/Pages/cybersecurity.html">Cyber</a>
+        <a href="/Website/Pages/Fraternity.html">Fraternity</a>
         <a href="https://chasemonigle.github.io/Website/#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <h1>Cybersecurity</h1>
-      <p>Placeholder — senior design project, scripts, and club competitions go here.</p>
+  <!-- Hero / Intro -->
+  <section class="section hero">
+    <div class="container grid grid-2">
+      <div>
+        <h1>Cybersecurity</h1>
+        <p class="small">Curiosity-driven, tool-focused, and team-oriented.</p>
+        <p>
+          I’m interested in building and securing systems people actually use—prioritizing
+          clarity, repeatability, and usable defenses. Recent work includes imaging/triage,
+          network traffic analysis, and hands-on CTFs with FITSEC.
+        </p>
+        <div class="tagrow">
+          <span class="pill">Endpoint Hardening</span>
+          <span class="pill">Forensics Imaging</span>
+          <span class="pill">Network Analysis</span>
+          <span class="pill">CTFs / NCL</span>
+        </div>
+      </div>
+      <div>
+        <img class="responsive-img" src="/Website/Photos/FL.png" alt="Florida Tech symbol" />
+      </div>
     </div>
   </section>
 
-  <footer class="footer">© <span id="y"></span> Chase Monigle</footer>
+  <!-- Skills & Tools -->
+  <section class="section">
+    <div class="container grid grid-2">
+      <article class="card">
+        <h2 style="margin-top:0">Skills & Tools</h2>
+        <ul class="ul-plain">
+          <li><span class="dot"></span><strong>FTK Imager</strong> — disk imaging, verification, and triage workflows.</li>
+          <li><span class="dot"></span><strong>Wireshark</strong> — packet capture, protocol inspection, filters, and basic IR pivots.</li>
+          <li><span class="dot"></span><strong>Scripting & Automation</strong> — small utilities to streamline repetitive tasks.</li>
+          <li><span class="dot"></span><strong>Usable Security</strong> — turning complex steps into simple checklists/UIs.</li>
+        </ul>
+      </article>
 
+      <article class="card">
+        <h2 style="margin-top:0">Certification</h2>
+        <p class="small">Google Cybersecurity Certificate</p>
+        <img class="responsive-img" src="/Website/Photos/Chase Monigle Google Cyber Security Certificate.jpeg"
+             alt="Google Cybersecurity Certificate — Chase Monigle" />
+        <p style="margin-top:.75rem">
+          Completed coursework covering security foundations, incident response, SIEM basics, and network fundamentals—
+          applied through practical labs and scenario-based assessments.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Team & Competitions -->
+  <section class="section">
+    <div class="container grid grid-2">
+      <article class="card">
+        <h2 style="margin-top:0">FITSEC — Cybersecurity Team</h2>
+        <img class="responsive-img" src="/Website/Photos/FITSEC.png" alt="FITSEC club logo" />
+        <p style="margin-top:.75rem">
+          I’m an active member of <strong>FITSEC</strong>, our campus cybersecurity organization that competes in
+          CTFs and runs workshops on topics like forensics, web exploitation, and OSINT. We emphasize collaborative
+          problem-solving and clear writeups to help newer members ramp quickly.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2 style="margin-top:0">NCL — Team Captain</h2>
+        <p>
+          Served as <strong>Team Captain</strong> for the National Cyber League (Spring 2025). I helped with
+          scoping practice sessions, delegating challenges (crypto, log analysis, network traffic, recon), and
+          collecting notes so we could convert wins into shareable playbooks.
+        </p>
+        <ul class="ul-plain">
+          <li><span class="dot"></span>Coordinated challenge coverage and timeboxing.</li>
+          <li><span class="dot"></span>Standardized notes for faster future solves.</li>
+          <li><span class="dot"></span>Focused on repeatable techniques over one-off tricks.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Projects & Writeups (placeholder you can fill later) -->
+  <section class="section">
+    <div class="container">
+      <h2>Projects & Writeups</h2>
+      <div class="grid grid-2" style="margin-top:1rem">
+        <article class="card">
+          <h3 style="margin-top:0">Traffic Analysis Notes (Wireshark)</h3>
+          <p>Filters, protocol triage, and quick steps I use to pivot from PCAPs to findings.</p>
+          <p class="small">Coming soon — documenting a few short case studies.</p>
+        </article>
+        <article class="card">
+          <h3 style="margin-top:0">Imaging Checklist (FTK Imager)</h3>
+          <p>Source → Verify → Hash → Store — a repeatable, low-friction imaging flow.</p>
+          <p class="small">Coming soon — downloadable checklist + screenshots.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">© <span id="y"></span> Chase Monigle — Built with GitHub Pages</footer>
+
+  <!-- Scripts (same mobile menu logic as home) -->
   <script>
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Mobile menu
     const btn = document.getElementById('menuBtn');
     const links = document.getElementById('site-links');
-    btn.addEventListener('click', () => {
-      links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', links.classList.contains('open'));
-    });
+
+    if (btn && links) {
+      links.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+
+      const toggleMenu = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      };
+
+      btn.addEventListener('click', toggleMenu);
+
+      // Close after link tap (mobile)
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          if (window.matchMedia('(max-width: 720px)').matches) {
+            links.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // Click outside to close (mobile)
+      document.addEventListener('click', (e) => {
+        if (!window.matchMedia('(max-width: 720px)').matches) return;
+        if (!links.contains(e.target) && !btn.contains(e.target)) {
+          links.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
   </script>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
 
